@@ -6,4 +6,4 @@ x\
 |___ cpp_bindings \
     |___ ...\
 |___ GodotProject (this repo)\
-    |___ ...\
+    |___ ...
