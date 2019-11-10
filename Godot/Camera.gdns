@@ -1,0 +1,8 @@
+[gd_resource type="NativeScript" load_steps=2 format=2]
+
+[ext_resource path="res://Attempt1-debug.gdnlib" type="GDNativeLibrary" id=1]
+
+[resource]
+resource_name = "MainCamera"
+class_name = "MainCamera"
+library = ExtResource( 1 )

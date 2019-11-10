@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Attempt1-debug.gdnlib" type="GDNativeLibrary" id=1]
+[ext_resource path="res://Camera_Follow.gd" type="Script" id=2]
+
+[sub_resource type="NativeScript" id=1]
+resource_name = "Player"
+class_name = "Player"
+library = ExtResource( 1 )
+
+[sub_resource type="CapsuleShape" id=2]
+
+[sub_resource type="CapsuleMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+params_diffuse_mode = 4
+params_specular_mode = 3
+albedo_color = Color( 1, 0, 0, 1 )
+
+[node name="Player" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 2, 0 )
+script = SubResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 3.09086e-008, -0.707107, 0.707107, -1, -4.37114e-008, 0, 3.09086e-008, -0.707107, -0.707107, 15, 7.10543e-015, -15 )
+far = 8192.0
+script = ExtResource( 2 )
+camera_speed = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
