@@ -1,10 +1,10 @@
 # GodotProject
 
 folder structure:
-
-x\
-|___ cpp_bindings \
-    |___ ...\
-|___ GodotProject (this repo)\
+<pre>
+x
+|___ cpp_bindings 
     |___ ...
-
+|___ GodotProject (this repo)
+    |___ ...
+</pre>
